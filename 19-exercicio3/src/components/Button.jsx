@@ -1,9 +1,11 @@
 import style from "./style.module.css"
 
-export default function Button({ text, link }) {
+export default function Button( props ) {
     return(
-        <a href={link}>
-            <button className={style.button}>{text}</button>
+        <a href={props.link} target="_blank">
+            <button className={style.button}>
+                {props.children}
+            </button>
         </a>
     )
 }
